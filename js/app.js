@@ -1,3 +1,5 @@
+
+// variable set as object holding arrays of tweets, which are key:value pairs
 let birds= [
     {
         tweet: `What a wonderful day it is today!`,
@@ -72,14 +74,18 @@ let birds= [
     },
 ];
 
+// setting the variable as a counter to count allow counting each index of the object if/when called
 let counter = 0;
-
+// while loop set the counter to stop at the amount of indexs inside the birds variable.
 while(counter < birds.length){
+    // if statement sets the condition for the while loop to progress through as if age is 18+ to print the object info
     if(birds[counter][`age`]>=18){
         console.log(birds[counter][`tweet`],birds[counter][`username`],birds[counter][`createdAt`]);
     }
+    // counter ++ makes the loop loop until counter has reached set limit
 counter++;
 }
+// for loop will excecute just as while loop does only printing info when age is under18
 for(counter=0; counter<birds.length; counter++){
     if(birds[counter][`age`]<18){
         console.log(birds[counter][`tweet`],birds[counter][`username`],birds[counter][`createdAt`]);
